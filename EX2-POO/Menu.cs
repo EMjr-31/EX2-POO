@@ -112,5 +112,26 @@ namespace EX2_POO
             login.Visible = true;
             this.Visible = false;
         }
+
+        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (rbtnNombre.Checked == true)
+            {
+                Busqueda();
+            }
+            if (rbtnTodo.Checked == true)
+            {
+                dgvProductos2.DataSource = null;
+                dgvProductos2.DataSource = Producto;
+            }
+        }
+
+        ///Methodo Search
+        public void Busqueda()
+        {
+            dgvProductos2.DataSource = null;
+            string dato = textBox1.Text;
+            dgvProductos2.DataSource = Producto.FindAll(p => p.Nombre.StartsWith(dato));
+        }
     }
 }

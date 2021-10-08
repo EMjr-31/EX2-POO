@@ -36,11 +36,15 @@
             this.dgvProductos2 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnExit = new System.Windows.Forms.Button();
+            this.rbtnTodo = new System.Windows.Forms.RadioButton();
+            this.rbtnNombre = new System.Windows.Forms.RadioButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdcutos1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos2)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -105,6 +109,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.rbtnNombre);
+            this.groupBox1.Controls.Add(this.rbtnTodo);
             this.groupBox1.Location = new System.Drawing.Point(58, 24);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(528, 73);
@@ -123,11 +130,41 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // rbtnTodo
+            // 
+            this.rbtnTodo.AutoSize = true;
+            this.rbtnTodo.Location = new System.Drawing.Point(66, 29);
+            this.rbtnTodo.Name = "rbtnTodo";
+            this.rbtnTodo.Size = new System.Drawing.Size(50, 17);
+            this.rbtnTodo.TabIndex = 0;
+            this.rbtnTodo.TabStop = true;
+            this.rbtnTodo.Text = "Todo";
+            this.rbtnTodo.UseVisualStyleBackColor = true;
+            // 
+            // rbtnNombre
+            // 
+            this.rbtnNombre.AutoSize = true;
+            this.rbtnNombre.Location = new System.Drawing.Point(202, 29);
+            this.rbtnNombre.Name = "rbtnNombre";
+            this.rbtnNombre.Size = new System.Drawing.Size(62, 17);
+            this.rbtnNombre.TabIndex = 1;
+            this.rbtnNombre.TabStop = true;
+            this.rbtnNombre.Text = "Nombre";
+            this.rbtnNombre.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(329, 29);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(133, 20);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 486);
+            this.ClientSize = new System.Drawing.Size(705, 486);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lbUser);
             this.Controls.Add(this.tabControl1);
@@ -139,6 +176,8 @@
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdcutos1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos2)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,5 +193,8 @@
         private System.Windows.Forms.DataGridView dgvProductos2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RadioButton rbtnNombre;
+        private System.Windows.Forms.RadioButton rbtnTodo;
     }
 }
