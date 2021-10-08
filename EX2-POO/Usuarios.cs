@@ -28,5 +28,9 @@ namespace EX2_POO
             string hash = BitConverter.ToString(hashBytes).Replace("-", String.Empty); ///Convert byte array to string 
             return hash;
         }
+
+
     }
+
+
 }

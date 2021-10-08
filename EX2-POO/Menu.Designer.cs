@@ -39,22 +39,35 @@
             this.rbtnTodo = new System.Windows.Forms.RadioButton();
             this.rbtnNombre = new System.Windows.Forms.RadioButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lbU = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtApass = new System.Windows.Forms.TextBox();
+            this.txtNpass = new System.Windows.Forms.TextBox();
+            this.txtVpass = new System.Windows.Forms.TextBox();
+            this.btnChangePass = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdcutos1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos2)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(12, 43);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(679, 398);
+            this.tabControl1.Size = new System.Drawing.Size(663, 398);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -63,7 +76,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(671, 372);
+            this.tabPage1.Size = new System.Drawing.Size(655, 372);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Venta Nueva";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -140,6 +153,7 @@
             this.rbtnTodo.TabStop = true;
             this.rbtnTodo.Text = "Todo";
             this.rbtnTodo.UseVisualStyleBackColor = true;
+            this.rbtnTodo.Click += new System.EventHandler(this.rbtnTodo_Click);
             // 
             // rbtnNombre
             // 
@@ -160,11 +174,108 @@
             this.textBox1.TabIndex = 2;
             this.textBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.groupBox2);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(655, 372);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Ajustes";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // lbU
+            // 
+            this.lbU.AutoSize = true;
+            this.lbU.Location = new System.Drawing.Point(57, 33);
+            this.lbU.Name = "lbU";
+            this.lbU.Size = new System.Drawing.Size(43, 13);
+            this.lbU.TabIndex = 0;
+            this.lbU.Text = "Usuario";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnChangePass);
+            this.groupBox2.Controls.Add(this.txtVpass);
+            this.groupBox2.Controls.Add(this.txtNpass);
+            this.groupBox2.Controls.Add(this.txtApass);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.lbU);
+            this.groupBox2.Location = new System.Drawing.Point(166, 44);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(332, 304);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Modificacion de Usuario";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(60, 65);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Contraseña Anterior";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(60, 122);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Nueva Contraseña";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(60, 175);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(137, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Confirma nueva contraseña";
+            // 
+            // txtApass
+            // 
+            this.txtApass.Location = new System.Drawing.Point(63, 86);
+            this.txtApass.Name = "txtApass";
+            this.txtApass.Size = new System.Drawing.Size(209, 20);
+            this.txtApass.TabIndex = 4;
+            this.txtApass.UseSystemPasswordChar = true;
+            // 
+            // txtNpass
+            // 
+            this.txtNpass.Location = new System.Drawing.Point(63, 146);
+            this.txtNpass.Name = "txtNpass";
+            this.txtNpass.Size = new System.Drawing.Size(209, 20);
+            this.txtNpass.TabIndex = 5;
+            this.txtNpass.UseSystemPasswordChar = true;
+            // 
+            // txtVpass
+            // 
+            this.txtVpass.Location = new System.Drawing.Point(63, 210);
+            this.txtVpass.Name = "txtVpass";
+            this.txtVpass.Size = new System.Drawing.Size(209, 20);
+            this.txtVpass.TabIndex = 6;
+            this.txtVpass.UseSystemPasswordChar = true;
+            // 
+            // btnChangePass
+            // 
+            this.btnChangePass.Location = new System.Drawing.Point(60, 251);
+            this.btnChangePass.Name = "btnChangePass";
+            this.btnChangePass.Size = new System.Drawing.Size(212, 23);
+            this.btnChangePass.TabIndex = 7;
+            this.btnChangePass.Text = "Aceptar";
+            this.btnChangePass.UseVisualStyleBackColor = true;
+            this.btnChangePass.Click += new System.EventHandler(this.btnChangePass_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 486);
+            this.ClientSize = new System.Drawing.Size(695, 476);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lbUser);
             this.Controls.Add(this.tabControl1);
@@ -178,6 +289,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,5 +310,15 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.RadioButton rbtnNombre;
         private System.Windows.Forms.RadioButton rbtnTodo;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnChangePass;
+        private System.Windows.Forms.TextBox txtVpass;
+        private System.Windows.Forms.TextBox txtNpass;
+        private System.Windows.Forms.TextBox txtApass;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbU;
     }
 }

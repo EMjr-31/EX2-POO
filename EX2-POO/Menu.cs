@@ -15,14 +15,16 @@ namespace EX2_POO
         /// Product List
         private List<Productos> Producto = new List<Productos>();
         int index = -1;
+        int pos;
 
         public Menu( int poin)
         {
             //Pointer 
-            int pos = poin;
+            pos = poin;
             InitializeComponent();
             ///Message Bienvenida
             lbUser.Text = "Bienvenido "+Usuarios.users[pos];
+            lbU.Text = "usuario: " + Usuarios.users[pos];
             ///Product entry
             Productos Product1 = new Productos();
             Product1.Codigo = 1;
@@ -132,6 +134,38 @@ namespace EX2_POO
             dgvProductos2.DataSource = null;
             string dato = textBox1.Text;
             dgvProductos2.DataSource = Producto.FindAll(p => p.Nombre.StartsWith(dato));
+        }
+
+        private void rbtnTodo_Click(object sender, EventArgs e)
+        {
+            dgvProductos2.DataSource = null;
+            dgvProductos2.DataSource = Producto;
+        }
+
+        private void btnChangePass_Click(object sender, EventArgs e)
+        {
+            if (Usuarios.pass[pos] == Usuarios.Encrypt(txtApass.Text))
+            {
+                if (txtNpass.Text == txtVpass.Text)
+                {
+                    Usuarios.pass[pos] = Usuarios.Encrypt(txtNpass.Text);
+                    MessageBox.Show("Se cambio la contreseaña");
+                    Form1 login = new Form1();
+                    login.Visible = true;
+                    this.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("La nueva contraseña no coincide, ingresela nuevamente");
+                    txtNpass.Clear();
+                    txtVpass.Clear();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Contraseña antigua erronea, ingresela de nuevo");
+                txtApass.Clear();
+            }
         }
     }
 }
