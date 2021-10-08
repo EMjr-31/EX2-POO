@@ -14,7 +14,8 @@ namespace EX2_POO
 {
     public partial class Form1 : Form
     {
-        /// User and pass arrays 
+        /// pointer
+        int pointer;
 
         public Form1()
         {
@@ -47,6 +48,10 @@ namespace EX2_POO
                     if (pas== Usuarios.pass[i])
                     {
                         MessageBox.Show("Bienvenido "+user);
+                        pointer = i;
+                        Menu menu = new Menu(pointer);
+                        menu.Show();
+                        this.Visible = false;
                     }
                     else
                     {
