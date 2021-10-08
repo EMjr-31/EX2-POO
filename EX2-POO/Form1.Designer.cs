@@ -91,6 +91,7 @@
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(177, 20);
             this.txtPass.TabIndex = 5;
+            this.txtPass.UseSystemPasswordChar = true;
             // 
             // btnEnter
             // 
@@ -102,6 +103,7 @@
             this.btnEnter.TabIndex = 6;
             this.btnEnter.Text = "--->";
             this.btnEnter.UseVisualStyleBackColor = true;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
             // label5
             // 
