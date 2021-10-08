@@ -15,22 +15,18 @@ namespace EX2_POO
     public partial class Form1 : Form
     {
         /// User and pass arrays 
-        public string[] users = new string[3];
-        public string[] pass = new string[3];
+
         public Form1()
         {
             InitializeComponent();
             /// Default user
-            users[0] = "admin";
-            users[1] = "vendedor";
-            users[2] = "Invitado";
+            Usuarios.users[0] = "admin";
+            Usuarios.users[1] = "vendedor";
+            Usuarios.users[2] = "Invitado";
             /// Default password
-            pass[0] = Encrypt("admin123");
-            pass[1] = Encrypt("Vendedor123");
-            pass[2] = Encrypt("invitado123");
-
-           /* txtUser.Text = users[0];
-            txtPass.Text = pass[0];*/
+            Usuarios.pass[0] = Usuarios.Encrypt("admin123");
+            Usuarios.pass[1] = Usuarios.Encrypt("Vendedor123");
+            Usuarios.pass[2] = Usuarios.Encrypt("invitado123");
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -43,12 +39,12 @@ namespace EX2_POO
             
             // Users Validation
             string user =txtUser.Text.Trim();
-            string pas = Encrypt(txtPass.Text.Trim());
+            string pas = Usuarios.Encrypt(txtPass.Text.Trim());
             for (int i = 0; i < 3; i++)
             {
-                if (user==users[i])
+                if (user == Usuarios.users[i])
                 {
-                    if (pas==pass[i])
+                    if (pas== Usuarios.pass[i])
                     {
                         MessageBox.Show("Bienvenido "+user);
                     }
@@ -59,17 +55,6 @@ namespace EX2_POO
                 }
             }
            
-        }
-        ///Encryption funtion 
-        public static string Encrypt (string Source)
-        {
-            string source = Source; ///text storage variable
-            SHA512 sha512Hash = SHA512.Create(); /// Sha512 funtion
-            //From String to byte array
-            byte[] sourceBytes = Encoding.UTF8.GetBytes(source); /// Convert string to byte array
-            byte[] hashBytes = sha512Hash.ComputeHash(sourceBytes); /// ComputeHash
-            string hash = BitConverter.ToString(hashBytes).Replace("-", String.Empty); ///Convert byte array to string 
-            return hash;
         }
     }
 }

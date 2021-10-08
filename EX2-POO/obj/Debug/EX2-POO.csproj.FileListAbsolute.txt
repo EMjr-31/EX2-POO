@@ -8,3 +8,4 @@ C:\Users\EMjr\Documents\Universidad\Ciclo 02 -2021\POO\Examenes\EX2-POO\EX2-POO\
 C:\Users\EMjr\Documents\Universidad\Ciclo 02 -2021\POO\Examenes\EX2-POO\EX2-POO\obj\Debug\EX2-POO.csproj.CoreCompileInputs.cache
 C:\Users\EMjr\Documents\Universidad\Ciclo 02 -2021\POO\Examenes\EX2-POO\EX2-POO\obj\Debug\EX2-POO.exe
 C:\Users\EMjr\Documents\Universidad\Ciclo 02 -2021\POO\Examenes\EX2-POO\EX2-POO\obj\Debug\EX2-POO.pdb
+C:\Users\EMjr\Documents\Universidad\Ciclo 02 -2021\POO\Examenes\EX2-POO\EX2-POO\obj\Debug\EX2_POO.Menu.resources
