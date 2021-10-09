@@ -20,6 +20,14 @@ namespace EX2_POO
         public Form1()
         {
             InitializeComponent();
+            /// Default user
+            Usuarios.users[0] = "admin";
+            Usuarios.users[1] = "vendedor";
+            Usuarios.users[2] = "invitado";
+            /// Default password
+            Usuarios.pass[0] = Usuarios.Encrypt("admin123");
+            Usuarios.pass[1] = Usuarios.Encrypt("Vendedor123");
+            Usuarios.pass[2] = Usuarios.Encrypt("invitado123");
 
         }
 
@@ -57,12 +65,9 @@ namespace EX2_POO
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            /// Default user
-            
-            /// Default password
-            Usuarios.pass[0] = Usuarios.Encrypt("admin123");
-            Usuarios.pass[1] = Usuarios.Encrypt("Vendedor123");
-            Usuarios.pass[2] = Usuarios.Encrypt("invitado123");
+
         }
+
     }
+
 }

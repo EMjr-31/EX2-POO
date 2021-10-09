@@ -49,6 +49,11 @@
             this.txtNpass = new System.Windows.Forms.TextBox();
             this.txtVpass = new System.Windows.Forms.TextBox();
             this.btnChangePass = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.rtxtOrder = new System.Windows.Forms.RichTextBox();
+            this.btnBill = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.lbOrder = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -72,6 +77,11 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.lbOrder);
+            this.tabPage1.Controls.Add(this.btnClear);
+            this.tabPage1.Controls.Add(this.btnBill);
+            this.tabPage1.Controls.Add(this.rtxtOrder);
+            this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.dgvProdcutos1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -271,6 +281,51 @@
             this.btnChangePass.UseVisualStyleBackColor = true;
             this.btnChangePass.Click += new System.EventHandler(this.btnChangePass_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(358, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Ingrese su pedido ";
+            // 
+            // rtxtOrder
+            // 
+            this.rtxtOrder.Location = new System.Drawing.Point(361, 33);
+            this.rtxtOrder.Name = "rtxtOrder";
+            this.rtxtOrder.Size = new System.Drawing.Size(278, 94);
+            this.rtxtOrder.TabIndex = 2;
+            this.rtxtOrder.Text = "";
+            // 
+            // btnBill
+            // 
+            this.btnBill.Location = new System.Drawing.Point(564, 133);
+            this.btnBill.Name = "btnBill";
+            this.btnBill.Size = new System.Drawing.Size(75, 23);
+            this.btnBill.TabIndex = 3;
+            this.btnBill.Text = "Facturar";
+            this.btnBill.UseVisualStyleBackColor = true;
+            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(483, 133);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 4;
+            this.btnClear.Text = "Limpiar";
+            this.btnClear.UseVisualStyleBackColor = true;
+            // 
+            // lbOrder
+            // 
+            this.lbOrder.AutoSize = true;
+            this.lbOrder.Location = new System.Drawing.Point(361, 170);
+            this.lbOrder.Name = "lbOrder";
+            this.lbOrder.Size = new System.Drawing.Size(49, 13);
+            this.lbOrder.TabIndex = 5;
+            this.lbOrder.Text = "Factura: ";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,6 +339,7 @@
             this.Load += new System.EventHandler(this.Menu_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdcutos1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos2)).EndInit();
@@ -320,5 +376,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbU;
+        private System.Windows.Forms.Label lbOrder;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnBill;
+        private System.Windows.Forms.RichTextBox rtxtOrder;
+        private System.Windows.Forms.Label label1;
     }
 }

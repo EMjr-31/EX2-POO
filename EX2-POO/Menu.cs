@@ -110,9 +110,7 @@ namespace EX2_POO
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Form1 login = new Form1();
-            login.Visible = true;
-            this.Visible = false;
+            BackToMenu();
         }
 
         private void textBox1_KeyUp(object sender, KeyEventArgs e)
@@ -150,9 +148,8 @@ namespace EX2_POO
                 {
                     Usuarios.pass[pos] = Usuarios.Encrypt(txtNpass.Text);
                     MessageBox.Show("Se cambio la contreseaña");
-                    Form1 login = new Form1();
-                    login.Visible = true;
-                    this.Visible = false;
+                    BackToMenu();
+                    
                 }
                 else
                 {
@@ -167,5 +164,42 @@ namespace EX2_POO
                 txtApass.Clear();
             }
         }
+        ///Back to menu Methodo 
+        public void BackToMenu()
+        {
+            Form1 login = new Form1();
+            login.Visible = true;
+            this.Visible = false;
+        }
+
+        private void btnBill_Click(object sender, EventArgs e)
+        {
+            double suma = 0, total = 0;
+            string cadena;
+            string orders = rtxtOrder.Text.Replace(" ", String.Empty);
+            string[] arreglo = orders.Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+            for (int i = 0; i < arreglo.Length; i=i+2)
+            {
+                if (int.Parse(arreglo[i]) <= Producto.Count())
+                {
+                    /*MessageBox.Show(arreglo[i + 1] + " " + Producto[int.Parse(arreglo[i])-1].Nombre);*/
+                    if (int.Parse(arreglo[i+1]) <= Producto[int.Parse(arreglo[i])-1].Cantida)
+                    {
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("No contamos con " + arreglo[i+1]+" "+ Producto[int.Parse(arreglo[i])-1].Nombre);
+                        break;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El producto que ingreso no existe revise el numero: "+arreglo[i]);
+                    break;
+                }
+            }
+        }
+
     }
 }
