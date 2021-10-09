@@ -30,36 +30,36 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lbUser = new System.Windows.Forms.Label();
-            this.dgvProdcutos1 = new System.Windows.Forms.DataGridView();
-            this.dgvProductos2 = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.rbtnTodo = new System.Windows.Forms.RadioButton();
-            this.rbtnNombre = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.lbU = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtApass = new System.Windows.Forms.TextBox();
-            this.txtNpass = new System.Windows.Forms.TextBox();
-            this.txtVpass = new System.Windows.Forms.TextBox();
-            this.btnChangePass = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.rtxtOrder = new System.Windows.Forms.RichTextBox();
-            this.btnBill = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
             this.lbOrder = new System.Windows.Forms.Label();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnBill = new System.Windows.Forms.Button();
+            this.rtxtOrder = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgvProdcutos1 = new System.Windows.Forms.DataGridView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.rbtnNombre = new System.Windows.Forms.RadioButton();
+            this.rbtnTodo = new System.Windows.Forms.RadioButton();
+            this.dgvProductos2 = new System.Windows.Forms.DataGridView();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnChangePass = new System.Windows.Forms.Button();
+            this.txtVpass = new System.Windows.Forms.TextBox();
+            this.txtNpass = new System.Windows.Forms.TextBox();
+            this.txtApass = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbU = new System.Windows.Forms.Label();
+            this.lbUser = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdcutos1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos2)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos2)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -91,28 +91,51 @@
             this.tabPage1.Text = "Venta Nueva";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // lbOrder
             // 
-            this.tabPage2.Controls.Add(this.groupBox1);
-            this.tabPage2.Controls.Add(this.dgvProductos2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(671, 372);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Consultar Inventario";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.lbOrder.AutoSize = true;
+            this.lbOrder.Location = new System.Drawing.Point(361, 170);
+            this.lbOrder.Name = "lbOrder";
+            this.lbOrder.Size = new System.Drawing.Size(49, 13);
+            this.lbOrder.TabIndex = 5;
+            this.lbOrder.Text = "Factura: ";
             // 
-            // lbUser
+            // btnClear
             // 
-            this.lbUser.AutoSize = true;
-            this.lbUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUser.Location = new System.Drawing.Point(424, 24);
-            this.lbUser.Name = "lbUser";
-            this.lbUser.Size = new System.Drawing.Size(90, 16);
-            this.lbUser.TabIndex = 1;
-            this.lbUser.Text = "Bienvenido ";
-            this.lbUser.Click += new System.EventHandler(this.label1_Click);
+            this.btnClear.Location = new System.Drawing.Point(483, 133);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 4;
+            this.btnClear.Text = "Limpiar";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnBill
+            // 
+            this.btnBill.Location = new System.Drawing.Point(564, 133);
+            this.btnBill.Name = "btnBill";
+            this.btnBill.Size = new System.Drawing.Size(75, 23);
+            this.btnBill.TabIndex = 3;
+            this.btnBill.Text = "Facturar";
+            this.btnBill.UseVisualStyleBackColor = true;
+            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
+            // 
+            // rtxtOrder
+            // 
+            this.rtxtOrder.Location = new System.Drawing.Point(361, 33);
+            this.rtxtOrder.Name = "rtxtOrder";
+            this.rtxtOrder.Size = new System.Drawing.Size(278, 94);
+            this.rtxtOrder.TabIndex = 2;
+            this.rtxtOrder.Text = "";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(358, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Ingrese su pedido ";
             // 
             // dgvProdcutos1
             // 
@@ -122,13 +145,17 @@
             this.dgvProdcutos1.Size = new System.Drawing.Size(319, 338);
             this.dgvProdcutos1.TabIndex = 0;
             // 
-            // dgvProductos2
+            // tabPage2
             // 
-            this.dgvProductos2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos2.Location = new System.Drawing.Point(58, 115);
-            this.dgvProductos2.Name = "dgvProductos2";
-            this.dgvProductos2.Size = new System.Drawing.Size(528, 208);
-            this.dgvProductos2.TabIndex = 0;
+            this.tabPage2.Controls.Add(this.groupBox1);
+            this.tabPage2.Controls.Add(this.dgvProductos2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(655, 372);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Consultar Inventario";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -142,16 +169,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Busqueda";
             // 
-            // btnExit
+            // textBox1
             // 
-            this.btnExit.ForeColor = System.Drawing.Color.Crimson;
-            this.btnExit.Location = new System.Drawing.Point(16, 451);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(40, 23);
-            this.btnExit.TabIndex = 9;
-            this.btnExit.Text = "<--";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.textBox1.Location = new System.Drawing.Point(329, 29);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(133, 20);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
+            // 
+            // rbtnNombre
+            // 
+            this.rbtnNombre.AutoSize = true;
+            this.rbtnNombre.Location = new System.Drawing.Point(202, 29);
+            this.rbtnNombre.Name = "rbtnNombre";
+            this.rbtnNombre.Size = new System.Drawing.Size(62, 17);
+            this.rbtnNombre.TabIndex = 1;
+            this.rbtnNombre.TabStop = true;
+            this.rbtnNombre.Text = "Nombre";
+            this.rbtnNombre.UseVisualStyleBackColor = true;
             // 
             // rbtnTodo
             // 
@@ -165,24 +200,13 @@
             this.rbtnTodo.UseVisualStyleBackColor = true;
             this.rbtnTodo.Click += new System.EventHandler(this.rbtnTodo_Click);
             // 
-            // rbtnNombre
+            // dgvProductos2
             // 
-            this.rbtnNombre.AutoSize = true;
-            this.rbtnNombre.Location = new System.Drawing.Point(202, 29);
-            this.rbtnNombre.Name = "rbtnNombre";
-            this.rbtnNombre.Size = new System.Drawing.Size(62, 17);
-            this.rbtnNombre.TabIndex = 1;
-            this.rbtnNombre.TabStop = true;
-            this.rbtnNombre.Text = "Nombre";
-            this.rbtnNombre.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(329, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(133, 20);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
+            this.dgvProductos2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos2.Location = new System.Drawing.Point(58, 115);
+            this.dgvProductos2.Name = "dgvProductos2";
+            this.dgvProductos2.Size = new System.Drawing.Size(528, 208);
+            this.dgvProductos2.TabIndex = 0;
             // 
             // tabPage3
             // 
@@ -193,15 +217,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Ajustes";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // lbU
-            // 
-            this.lbU.AutoSize = true;
-            this.lbU.Location = new System.Drawing.Point(57, 33);
-            this.lbU.Name = "lbU";
-            this.lbU.Size = new System.Drawing.Size(43, 13);
-            this.lbU.TabIndex = 0;
-            this.lbU.Text = "Usuario";
             // 
             // groupBox2
             // 
@@ -220,57 +235,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Modificacion de Usuario";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(60, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Contraseña Anterior";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(60, 122);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Nueva Contraseña";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(60, 175);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(137, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Confirma nueva contraseña";
-            // 
-            // txtApass
-            // 
-            this.txtApass.Location = new System.Drawing.Point(63, 86);
-            this.txtApass.Name = "txtApass";
-            this.txtApass.Size = new System.Drawing.Size(209, 20);
-            this.txtApass.TabIndex = 4;
-            this.txtApass.UseSystemPasswordChar = true;
-            // 
-            // txtNpass
-            // 
-            this.txtNpass.Location = new System.Drawing.Point(63, 146);
-            this.txtNpass.Name = "txtNpass";
-            this.txtNpass.Size = new System.Drawing.Size(209, 20);
-            this.txtNpass.TabIndex = 5;
-            this.txtNpass.UseSystemPasswordChar = true;
-            // 
-            // txtVpass
-            // 
-            this.txtVpass.Location = new System.Drawing.Point(63, 210);
-            this.txtVpass.Name = "txtVpass";
-            this.txtVpass.Size = new System.Drawing.Size(209, 20);
-            this.txtVpass.TabIndex = 6;
-            this.txtVpass.UseSystemPasswordChar = true;
-            // 
             // btnChangePass
             // 
             this.btnChangePass.Location = new System.Drawing.Point(60, 251);
@@ -281,50 +245,87 @@
             this.btnChangePass.UseVisualStyleBackColor = true;
             this.btnChangePass.Click += new System.EventHandler(this.btnChangePass_Click);
             // 
-            // label1
+            // txtVpass
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(358, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Ingrese su pedido ";
+            this.txtVpass.Location = new System.Drawing.Point(63, 210);
+            this.txtVpass.Name = "txtVpass";
+            this.txtVpass.Size = new System.Drawing.Size(209, 20);
+            this.txtVpass.TabIndex = 6;
+            this.txtVpass.UseSystemPasswordChar = true;
             // 
-            // rtxtOrder
+            // txtNpass
             // 
-            this.rtxtOrder.Location = new System.Drawing.Point(361, 33);
-            this.rtxtOrder.Name = "rtxtOrder";
-            this.rtxtOrder.Size = new System.Drawing.Size(278, 94);
-            this.rtxtOrder.TabIndex = 2;
-            this.rtxtOrder.Text = "";
+            this.txtNpass.Location = new System.Drawing.Point(63, 146);
+            this.txtNpass.Name = "txtNpass";
+            this.txtNpass.Size = new System.Drawing.Size(209, 20);
+            this.txtNpass.TabIndex = 5;
+            this.txtNpass.UseSystemPasswordChar = true;
             // 
-            // btnBill
+            // txtApass
             // 
-            this.btnBill.Location = new System.Drawing.Point(564, 133);
-            this.btnBill.Name = "btnBill";
-            this.btnBill.Size = new System.Drawing.Size(75, 23);
-            this.btnBill.TabIndex = 3;
-            this.btnBill.Text = "Facturar";
-            this.btnBill.UseVisualStyleBackColor = true;
-            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
+            this.txtApass.Location = new System.Drawing.Point(63, 86);
+            this.txtApass.Name = "txtApass";
+            this.txtApass.Size = new System.Drawing.Size(209, 20);
+            this.txtApass.TabIndex = 4;
+            this.txtApass.UseSystemPasswordChar = true;
             // 
-            // btnClear
+            // label4
             // 
-            this.btnClear.Location = new System.Drawing.Point(483, 133);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 23);
-            this.btnClear.TabIndex = 4;
-            this.btnClear.Text = "Limpiar";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(60, 175);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(137, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Confirma nueva contraseña";
             // 
-            // lbOrder
+            // label3
             // 
-            this.lbOrder.AutoSize = true;
-            this.lbOrder.Location = new System.Drawing.Point(361, 170);
-            this.lbOrder.Name = "lbOrder";
-            this.lbOrder.Size = new System.Drawing.Size(49, 13);
-            this.lbOrder.TabIndex = 5;
-            this.lbOrder.Text = "Factura: ";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(60, 122);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Nueva Contraseña";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(60, 65);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Contraseña Anterior";
+            // 
+            // lbU
+            // 
+            this.lbU.AutoSize = true;
+            this.lbU.Location = new System.Drawing.Point(57, 33);
+            this.lbU.Name = "lbU";
+            this.lbU.Size = new System.Drawing.Size(43, 13);
+            this.lbU.TabIndex = 0;
+            this.lbU.Text = "Usuario";
+            // 
+            // lbUser
+            // 
+            this.lbUser.AutoSize = true;
+            this.lbUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUser.Location = new System.Drawing.Point(424, 24);
+            this.lbUser.Name = "lbUser";
+            this.lbUser.Size = new System.Drawing.Size(90, 16);
+            this.lbUser.TabIndex = 1;
+            this.lbUser.Text = "Bienvenido ";
+            this.lbUser.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.ForeColor = System.Drawing.Color.Crimson;
+            this.btnExit.Location = new System.Drawing.Point(16, 451);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(40, 23);
+            this.btnExit.TabIndex = 9;
+            this.btnExit.Text = "<--";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // Menu
             // 
@@ -340,11 +341,11 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdcutos1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos2)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

@@ -14,7 +14,6 @@ namespace EX2_POO
     {
         /// Product List
         private List<Productos> Producto = new List<Productos>();
-        int index = -1;
         int pos;
 
         public Menu( int poin)
@@ -174,8 +173,10 @@ namespace EX2_POO
 
         private void btnBill_Click(object sender, EventArgs e)
         {
-            double suma = 0, total = 0;
-            string cadena;
+            string cadena = "Factura de compra \nSupermercado Don Diego";
+            lbOrder.Text = "";
+            double  total = 0;
+            int veri=0;
             string orders = rtxtOrder.Text.Replace(" ", String.Empty);
             string[] arreglo = orders.Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0; i < arreglo.Length; i=i+2)
@@ -185,7 +186,17 @@ namespace EX2_POO
                     /*MessageBox.Show(arreglo[i + 1] + " " + Producto[int.Parse(arreglo[i])-1].Nombre);*/
                     if (int.Parse(arreglo[i+1]) <= Producto[int.Parse(arreglo[i])-1].Cantida)
                     {
-
+                        double precio = Producto[int.Parse(arreglo[i]) - 1].Precio * int.Parse(arreglo[i + 1]);
+                        total = total + precio;
+                        cadena = cadena + "\n"+ " "+ Producto[int.Parse(arreglo[i]) - 1].Nombre+" ---"+ arreglo[i + 1] + " x $"+ Producto[int.Parse(arreglo[i]) - 1].Precio+" = $"+precio.ToString();
+                        if (Producto[int.Parse(arreglo[i]) - 1].Codigo == 2)
+                        {
+                            veri++;
+                        }
+                        if (Producto[int.Parse(arreglo[i]) - 1].Codigo == 9)
+                        {
+                            veri++;
+                        }
                     }
                     else
                     {
@@ -199,7 +210,24 @@ namespace EX2_POO
                     break;
                 }
             }
+            if (veri == 2)
+            {
+                cadena = cadena + "\n Dulces --- 5 Gratis";
+            }
+            if (total > 20)
+            {
+                total = total*0.97;
+            }
+            cadena = cadena + "\n\t Total de factura:$ " + total.ToString();
+            
+            lbOrder.Text = cadena;
         }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            lbOrder.Text = "";
+            rtxtOrder.Clear();
+            rtxtOrder.Focus();
+        }
     }
 }
